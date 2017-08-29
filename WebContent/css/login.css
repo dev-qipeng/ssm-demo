@@ -1,0 +1,66 @@
+body{
+	margin: 0;
+	padding: 0;
+    background-image: url(../images/login_bg.png);
+    background-size: 100% 700px;
+    background-position: 0px;
+    background-repeat: no-repeat;
+    background-color: rgba(93,213,200,0.6);
+        }
+.header {
+	width: 100%;
+	height: 80px;
+	background-color: ;
+}
+
+.login_student {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+    border-radius: 10px;
+    background-color: white;
+}
+.login_title{
+    padding-top: 5px;
+    color: rgba(93,213,200);
+}
+.login_tab span{
+	margin: 0 60px;
+}
+.cur{
+	font-size: 20px;
+    color: cadetblue
+}
+.student_form{
+
+	width: 250px;
+	height:210px;
+	margin: 20px auto;
+    overflow: hidden;
+}
+table{
+    margin: 20px 0px;
+    text-align: center;
+}
+td{
+    height: 50px;
+}
+[type="text"],[type="password"]{
+    border: 1px solid green;
+    height: 20px;
+}
+[type="submit"]{
+    width: 100px;
+    height: 30px;
+    background-color: rgba(93,213,200);
+}
+.text-tip{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-size: 15px;
+    color: darkgray
+}
+.text-tip a{
+    color: aquamarine;
+}

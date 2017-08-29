@@ -1,0 +1,26 @@
+table{
+    margin: 0px auto;
+}
+tr{
+    height: 50px;
+    font-size: 15px;
+}
+td{
+    text-align: right;
+}
+input{
+    height: 33px;
+    width: 200px;
+    border: 1px solid aquamarine;
+}
+form{
+    text-align: center;
+}
+.button{
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+    background-color: chartreuse;
+    text-align: center;
+}
+
