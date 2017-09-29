@@ -1,20 +1,15 @@
-package com.qpp.springmvc.controller;
+package sqar.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.qpp.springmvc.dao.pojo.Student;
-import com.qpp.springmvc.dao.pojo.User;
-import com.qpp.springmvc.service.StudentService;
+import sqar.db.model.Coin;
 
 @Controller
 @RequestMapping("student")
 public class StudentController {
 
-	@Autowired
-	private StudentService studentService;
 	
 	@RequestMapping("/shouye")
 	public String index(){
@@ -28,18 +23,16 @@ public class StudentController {
 	
 	@RequestMapping("/studentinfo")
 	public String getStudentInfo(Model model,int id){
-		Student student = studentService.getStudentById(id);
-		model.addAttribute("student", student);
 		return "student/studentinfo";
 	}
 	
 	@RequestMapping("/applyproject")
-	public String applyProject(User user){
+	public String applyProject(Coin user){
 		
 		return "student/projectapply";
 	}
 	@RequestMapping("update")
-	public void updateStudentInfo(User user){
+	public void updateStudentInfo(Coin user){
 		
 	}
 }
