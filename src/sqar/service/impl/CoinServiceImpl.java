@@ -5,11 +5,11 @@ import java.io.IOException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import sqar.service.ProjectService;
+import sqar.service.CoinService;
 import sqar.utils.ImgUtils;
 
 @Service
-public class ProjectServiceImpl implements ProjectService {
+public class CoinServiceImpl implements CoinService {
 
 	@Override
 	public String uploadImg(MultipartFile file) throws IllegalStateException, IOException {

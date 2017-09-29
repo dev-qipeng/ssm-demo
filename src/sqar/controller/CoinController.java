@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import sqar.service.ProjectService;
+import sqar.service.CoinService;
 
 @Controller
-public class ImgUploadController {
+public class CoinController {
 
 	@Autowired
-	private ProjectService projectService;
+	private CoinService projectService;
 	
 	@RequestMapping(value="/upload",method=RequestMethod.POST)
 	public @ResponseBody Map<String,Object> fileUpload(MultipartFile file,HttpServletRequest request) throws IllegalStateException, IOException{

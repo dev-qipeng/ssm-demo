@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public interface ProjectService {
+public interface CoinService {
 
 	String uploadImg(MultipartFile file) throws IllegalStateException, IOException;
 
