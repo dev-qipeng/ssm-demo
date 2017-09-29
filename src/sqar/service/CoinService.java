@@ -1,11 +1,18 @@
 package sqar.service;
 
-import java.io.IOException;
+import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
-public interface CoinService {
+import sqar.db.model.Coin;
 
-	String uploadImg(MultipartFile file) throws IllegalStateException, IOException;
+public interface CoinService {
+	
+	List<Coin> findCoinList(String dynasty);
+	
+	Coin findCoinById(String coinId);
+
+	String uploadImg(MultipartFile file, String coinId) throws Exception;
+
 
 }
