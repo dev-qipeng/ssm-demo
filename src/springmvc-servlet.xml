@@ -12,7 +12,7 @@
 
 
 	<!-- 扫描controller类 -->
-	<context:component-scan base-package="com.qpp.springmvc.controller" />
+	<context:component-scan base-package="sqar.controller" />
 
 	<!-- 配置注解驱动 -->
 	<mvc:annotation-driven />

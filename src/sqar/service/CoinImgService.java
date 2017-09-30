@@ -2,7 +2,7 @@ package sqar.service;
 
 import java.util.List;
 
-import sqar.db.model.CoinImg;
+import sqar.dao.model.CoinImg;
 
 public interface CoinImgService {
 

@@ -10,30 +10,6 @@ import javax.servlet.http.HttpServletResponse;
 
 public class RestUtils {
 
-	private static String IMG_BASE_URL = ConfigUtils.getImgBaseUrl();
-	
-	private static String IMG_BASE_URL_HTTPS = ConfigUtils.getImgBaseUrlApp();
-
-	public static String path2url(String path) {
-		if (StringUtils.isEmpty(path)) {
-			return null;
-		}
-		if (path.startsWith("http")) {
-			return path;
-		}
-		return IMG_BASE_URL + path;
-	}
-	
-	public static String httpspath2url(String path) {
-		if (StringUtils.isEmpty(path)) {
-			return null;
-		}
-		if (path.startsWith("https")) {
-			return path;
-		}
-		return IMG_BASE_URL_HTTPS + path;
-	}
-	
 
 	public static void prepareReponse(HttpServletResponse response) {
 		response.setCharacterEncoding("UTF-8");

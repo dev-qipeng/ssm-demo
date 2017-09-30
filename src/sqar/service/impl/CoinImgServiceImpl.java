@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import sqar.db.mapper.CoinImgMapper;
-import sqar.db.model.CoinImg;
-import sqar.db.model.CoinImgExample;
-import sqar.db.model.CoinImgExample.Criteria;
+import sqar.dao.mapper.CoinImgMapper;
+import sqar.dao.model.CoinImg;
+import sqar.dao.model.CoinImgExample;
+import sqar.dao.model.CoinImgExample.Criteria;
 import sqar.service.CoinImgService;
 import sqar.utils.StringUtils;
 

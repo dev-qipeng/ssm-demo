@@ -36,11 +36,17 @@ public class ConfigUtils {
 	}
 
 	
-	
 	public static String getImgBaseUrl(){
 		String baseUrl = getBaseUrl();
-		
 		return baseUrl+"img/";
+	}
+	
+	public static String getImgServerDir(){
+		String baseUrl = getConfigProperties().getProperty("img_server_dir");
+		if(!baseUrl.endsWith("/")){
+			baseUrl+="/";
+		}
+		return baseUrl;
 	}
 	
 	private static String getBaseUrl(){
@@ -51,18 +57,6 @@ public class ConfigUtils {
 		return baseUrl;
 	}
 	
-	public static String getImgBaseUrlApp() {
-		String baseUrl = getBaseUrlApp();
-		return baseUrl + "img/";
-	}
-	
-	private static String getBaseUrlApp(){
-		String baseUrl = getConfigProperties().getProperty("baseurlapp");
-		if(!baseUrl.endsWith("/")){
-			baseUrl+="/";
-		}
-		return baseUrl;
-	}
 	
 	public static Properties getConfigProperties(){
 		initConfigPropIfNeeded();

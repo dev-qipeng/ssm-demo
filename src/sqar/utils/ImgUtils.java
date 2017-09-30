@@ -11,12 +11,25 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class ImgUtils {
 
-	static String imgBaseDir = "/qpp/img/";
-	static String imgBaseUrl = "127.0.0.1:8080/img/";
+	private static String IMG_SERVER_DIR = ConfigUtils.getImgServerDir();
+	private static String IMG_BASE_URL = ConfigUtils.getImgBaseUrl();
 
 	static SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
 
+	
+	//返回所上传图片的全url
+	public static String path2url(String path) {
+		if (StringUtils.isEmpty(path)) {
+			return null;
+		}
+		if (path.startsWith("http")) {
+			return path;
+		}
+		return IMG_BASE_URL + path;
+	}
+	
 	public static String genOutputFilename() {
+		ConfigUtils.getConfigProperties().getProperty("");
 		String ext = ".jpg";
 		return genOutputFilename(ext);
 	}
@@ -54,10 +67,10 @@ public class ImgUtils {
 		String filename = file.getOriginalFilename();//获取源文件名
 		String ext = ImgUtils.getExtName(filename);//获取文件后缀
 		String path = ImgUtils.genOutputFilename(ext);//获取文件上传路径
-		File f = new File(imgBaseDir+path);
+		File f = new File(IMG_SERVER_DIR+path);
 		f.getParentFile().mkdirs();
 		file.transferTo(f);//开始上传到指定目录
-		return imgBaseUrl+path;
+		return path2url(path);//返回所上传图片的全url
 	}
 	
 }

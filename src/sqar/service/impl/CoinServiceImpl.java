@@ -6,14 +6,16 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import sqar.db.mapper.CoinImgMapper;
-import sqar.db.mapper.CoinMapper;
-import sqar.db.model.Coin;
-import sqar.db.model.CoinExample;
-import sqar.db.model.CoinExample.Criteria;
-import sqar.db.model.CoinImg;
+import sqar.dao.mapper.CoinImgMapper;
+import sqar.dao.mapper.CoinMapper;
+import sqar.dao.model.Coin;
+import sqar.dao.model.CoinExample;
+import sqar.dao.model.CoinExample.Criteria;
+import sqar.dao.model.CoinImg;
 import sqar.service.CoinService;
+import sqar.utils.IDGenerator;
 import sqar.utils.ImgUtils;
+import sqar.utils.RestUtils;
 import sqar.utils.StringUtils;
 
 @Service
@@ -54,9 +56,8 @@ public class CoinServiceImpl implements CoinService {
 		if (path == null || path.equals("")) {
 			throw new Exception();
 		}
-		
 		CoinImg coinImg = new CoinImg();
-		coinImg.setCoinId(UUID.randomUUID().toString());
+		coinImg.setId(IDGenerator.getUuid());
 		coinImg.setCoinId(coinId);
 		coinImg.setPicUrl(path);
 		coinImg.setSeq(null);

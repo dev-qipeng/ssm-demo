@@ -3,9 +3,14 @@
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
+
+	 <settings>
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="LOG4J" />
+    </settings>
+
 	<!-- 别名 -->
 	<typeAliases>
-		<package name="com.qpp.springmvc.dao.pojo" />
+		<package name="sqar.dao.model" />
 	</typeAliases>
-
 </configuration>

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import sqar.db.model.Coin;
+import sqar.dao.model.Coin;
 
 public interface CoinService {
 	

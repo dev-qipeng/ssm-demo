@@ -2,8 +2,8 @@ package sqar.controller.vo;
 
 import java.util.List;
 
-import sqar.db.model.Coin;
-import sqar.db.model.CoinImg;
+import sqar.dao.model.Coin;
+import sqar.dao.model.CoinImg;
 
 public class CoinVO {
 

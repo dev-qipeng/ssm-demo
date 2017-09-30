@@ -7,11 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>文件上传</h2>
-<form action="upload" method="post" enctype="multipart/form-data">
-	<input type="hidden" name="coinId" value="2">
-	<input type="file" name="file">
-	<input type="submit" value="上传" >
-</form>
+<img alt="上传图片" src="${imgUrl }">
 </body>
 </html>
